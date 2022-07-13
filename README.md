@@ -24,3 +24,6 @@ Saheed Oladejo
 
 ## Tech Stack
 * Spark
+
+### License
+[MIT License](https://choosealicense.com/licenses/mit/)
