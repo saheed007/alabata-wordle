@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+	<title>Wordl</title>
+
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+
+	<style type="text/css">
+		span{
+			font-size: 30px;
+						font-weight: bold;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	</style>
+
+	<script>
+		(function() {
+		   'use strict';
+		   var i,c;
+		function init(){ 
+		   i=document.getElementById('keyboard').getElementsByTagName('input');
+		for(c=0;c<i.length;c++) {
+		if(i[c].type==='button') {
+		   i[c].addEventListener('onclick',makeClickHandler(c));
+		   }
+		  }
+
+		document.getElementById('clear').onclick=function() {
+		   document.getElementById('texts').value='';
+		  }
+		 }
+
+		function makeClickHandler(c) {
+		   i[c].onclick=function() {
+		   document.getElementById('texts').value+=this.value.toLowerCase();
+		  };
+		 }
+
+		   window.addEventListener?
+		   window.addEventListener('load',init,false):
+		   window.attachEvent('onload',init);
+		})();
+	</script>
+
+</head>
+<body>
+	<nav class="navbar navbar-light bg-light" style="padding: 0px; margin-top: -5px; margin-bottom: 5px">
+	  <span class="navbar-brand mb-0 h1" style="font-family: fantasy; font-weight: bold; font-size: 30px;">ALABATA WORDLE</span>
+	  <span class="navbar-brand mb-0 h1" >
+	  	    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalLong">
+				  HOW TO PLAY
+			</button>
+
+			<!-- Modal -->
+			<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLongTitle">HOW TO PLAY</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			      	<p><small>Guess the WORDLE in six tries.</small></p>
+			      	<p><small>Each guess must be a valid five-letter word.</small></p>
+			      	<p><small>Hit the enter button to submit.</small></p>
+			      	<p><small>After each guess, the color of the tiles will change to show how </small></p>
+			      	<p style="margin-top: -20px;"><small>close your guess was to the word.</small></p>
+			      	<p><small style="font-weight: bold;">Example</small></p>
+
+			      	<div style="border: 1px solid black; height: 50px;  margin-top: 5px; text-align: center;">
+						    <span style="margin-top: -20px;  background-color: lightseagreen; color: white">W</span>
+						    <span style="margin-top: -20px;  background-color: gray; color: white;">O</span>
+						    <span style="margin-top: -20px;  background-color: lightseagreen; color: white">R</span>
+						    <span style="margin-top: -20px;  background-color: gray; color: white;">D</span>
+						    <span style="margin-top: -20px;  background-color: gold; color: white">S</span>
+				    </div>
+				    <p><small>The letters <strong>W</strong> and <strong>R</strong> are in the word and in the correct spot.</small></p>
+				    <p><small>The letter <strong>S</strong> is in the word but in the wrong spot.</small></p>
+				    <p><small>The letters <strong>O</strong> and <strong>D</strong> are not in the word in any spot.</small></p>
+				    
+			      </div>
+			    </div>
+			  </div>
+			</div>	
+		</span>
+	</nav>
+ 	{% block body %} {% endblock %}
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
