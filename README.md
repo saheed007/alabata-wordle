@@ -3,7 +3,7 @@ Alabata-Wordle is a clone of the New York Times Wordle web game. ([Check out the
 
 ## How to use
 * Download this repo on your machine by using `git clone` as shown below.
-`git clone git@github.com:saheed007/alabata-wordle.git`
+```git clone git@github.com:saheed007/alabata-wordle.git```
 * Run the **app.py** file.
 * Copy and paste the local host link in your browser (http://127.0.0.1:2222) 
 
