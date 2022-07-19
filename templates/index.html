@@ -320,7 +320,7 @@
 		    {% else %}
 				<form method="POST">
 				  <div class="form-group" style="width: 300px;  margin: 0 auto; margin-bottom: 10px; margin-top: 5px">
-				    <h6>Input your guess</h6>
+				    <h6>Input your guess ({{ word }})</h6>
 				    <input type="text " class="form-control" id="texts" maxlength="5" placeholder="" name="answer" style="height: 40px; font-size: 35px; text-align: center; text-transform: uppercase;" autofocus="on" >
 				  </div>
 				  {% with messages = get_flashed_messages() %}
